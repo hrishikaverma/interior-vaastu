@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
+
 export function SmoothScroll({ children }) {
   const location = useLocation();
   const navType = useNavigationType();
+
   useEffect(() => {
     if (navType !== "POP") {
       window.scrollTo({
@@ -10,6 +12,7 @@ export function SmoothScroll({ children }) {
         behavior: "smooth",
       });
     }
-  }, [location]);
+  }, [location, navType]);
+
   return <>{children}</>;
 }
