@@ -22,31 +22,37 @@ import { Privacy } from './Allterms/privacy';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { SmoothScroll } from './smooth';
 
-function App() {
+// 🔹 Admin Panel Routes Import
+import AdminRoutes from './admin/AdminRoutes';
 
+function App() {
   return (
     <BrowserRouter>
-    <SmoothScroll />
+      <SmoothScroll />
       <Header />
       <Routes>
-        <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/restricted-page' element={<RestrictedPage/>}></Route>
-        <Route path='/pricing' element={<PricingPlan/>}></Route>
-        <Route path='/faq' element={<Faq/>}></Route>
-        <Route path='/project-details' element={<ProjectDetails/>}></Route>
-        <Route path='/team' element={<Team/>}></Route>
-        <Route path='/team-single' element={<TeamSingle/>}></Route>
-        <Route path='/aboutus' element={<About/>}></Route>
-        <Route path='/error' element={<NotFound/>}></Route>
-        <Route path='/blog-details' element={<BlogDetails/>}></Route>
-        <Route path='/services' element={<Services/>}></Route>
-        <Route path='/service-single' element={<ServiceSingle/>}></Route>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/blog' element={<Blog/>}></Route>
-        <Route path='/projects' element={<Project/>}></Route>
-        <Route path='/terms' element={<Terms />}></Route>
-        <Route path='/cookies-policy' element={<Cookies />}></Route>
-        <Route path='/privacy-policy' element={<Privacy />}></Route>
+        {/* ✅ Public Routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/restricted-page" element={<RestrictedPage />} />
+        <Route path="/pricing" element={<PricingPlan />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/project-details" element={<ProjectDetails />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/team-single" element={<TeamSingle />} />
+        <Route path="/aboutus" element={<About />} />
+        <Route path="/error" element={<NotFound />} />
+        <Route path="/blog-details" element={<BlogDetails />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/service-single" element={<ServiceSingle />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/cookies-policy" element={<Cookies />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+
+        {/* ✅ Admin Panel Routes */}
+        <Route path="/admin/*" element={<AdminRoutes />} />
       </Routes>
       <Footer />
     </BrowserRouter>
