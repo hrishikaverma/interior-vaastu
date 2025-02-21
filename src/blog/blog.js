@@ -39,9 +39,10 @@ export function Blog() {
             <div className="ln-subtext">
               <h1>Low Cost Latest Invented Interior Designing Ideas</h1>
               <p>
-                Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.
+              Transform your space with stylish yet budget-friendly interior design ideas. Discover creative ways to enhance your home with smart décor choices, DIY solutions, and space-saving techniques.
+
+Contrary to popular belief, stunning interior design doesn’t require a hefty budget. With the right materials, thoughtful color schemes, and multifunctional furniture, you can achieve a modern and elegant look without overspending.
                 <br /><br />
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classica.
               </p>
             </div>
             <div className="ln-detail">

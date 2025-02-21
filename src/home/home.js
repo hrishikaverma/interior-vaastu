@@ -24,6 +24,7 @@ import brand4 from "../images/brand4.svg";
 import brand5 from "../images/brand5.svg";
 import customer1 from "../images/home/customer.jpg";
 
+
 export function Home() {
   const handleChange = (e) => {
     const pClass = e.target.parentElement;
@@ -78,9 +79,11 @@ export function Home() {
           <div className="hp-subtext">
             <h1>We Create The Art Of Stylish Living Stylishly</h1>
             <p>
-              It is a long established fact that a reader will be distracted
-              by the of readable content of a page when lookings at its
-              layouts the points of using that it has a more-or-less normal.
+            At Interior Vaastu, we blend creativity with functionality to craft spaces that reflect elegance, comfort, and modern aesthetics. Our approach to interior design goes beyond just décor – we create harmonious living environments that enhance your lifestyle.
+
+Every space tells a story, and we ensure that each design element aligns with your vision. From sophisticated layouts to thoughtfully curated furnishings, our expertise transforms ordinary spaces into timeless masterpieces. Whether it’s a luxurious home, a cozy apartment, or a professional workspace, our designs embody style, balance, and personalization.
+
+With a focus on quality craftsmanship and innovative concepts, we bring to life interiors that are not just visually stunning but also highly functional. Your dream space deserves the perfect blend of aesthetics and practicality, and we make it happen with style! ✨
             </p>
             <div className="callUs">
               <div className="phoneNum">
@@ -89,7 +92,7 @@ export function Home() {
                 </p>
                 <a href="tel: +994 (070) 883-37-38">
                   <p>
-                    +994 (070) 883-37-38
+                    +91 (070) 883-37-38
                     <br />
                     <span>Call Us Anytime</span>
                   </p>
@@ -116,7 +119,7 @@ export function Home() {
             </p>
             <a href="tel: +994 (070) 883-37-38">
               <p>
-                +994 (070) 883-37-38
+                +91 5647 67 8945
                 <br />
                 <span>Call Us Anytime</span>
               </p>
@@ -141,6 +144,7 @@ export function Home() {
                     <div>
                       <img src={customer1} alt="customer"></img>
                     </div>
+                    
                     <p>
                       {req.fullname}
                       <br />
@@ -175,8 +179,9 @@ export function Home() {
         <div className="homeProjects">
           <h1>Follow Our Projects</h1>
           <p>
-            It is a long established fact that a reader will be distracted by
-            the of readable content of a page lookings at its layouts.
+          Discover our exceptional work, where creativity meets functionality. Our projects are designed with precision, ensuring a seamless blend of aesthetics and innovation. Stay updated and get inspired by our latest designs and developments.
+
+
           </p>
           <div className="hp-list">
             <div className="hp-project">
@@ -187,6 +192,10 @@ export function Home() {
                 <div className="hp-pro-info">
                   <p className="hp-prj-title">Modern Kitchen</p>
                   <p className="hp-prj-path">Decor / Architecture</p>
+                  <p>
+                  A perfect blend of aesthetics and efficiency, our modern kitchen designs redefine elegance with smart storage solutions, sleek finishes, and high-end appliances. Experience a seamless balance of style and functionality, tailored to complement your home’s interior.
+
+                  </p>
                 </div>
                 <div className="hp-pro-btn">
                   <Link to={`/project-details`}>
@@ -204,8 +213,13 @@ export function Home() {
               </div>
               <div className="hp-pro-detail">
                 <div className="hp-pro-info">
-                  <p className="hp-prj-title">Modern Kitchen</p>
+                  <p className="hp-prj-title">Modern Living Room</p>
                   <p className="hp-prj-path">Decor / Architecture</p>
+                  <p>
+                  A perfect fusion of elegance and comfort, our modern living room designs create a warm and inviting atmosphere. With sleek furniture, ambient lighting, and thoughtfully curated décor, we craft spaces that reflect contemporary aesthetics while ensuring maximum functionality.
+
+
+                  </p>
                 </div>
                 <div className="hp-pro-btn">
                   <Link to={`/project-details`}>
@@ -223,8 +237,11 @@ export function Home() {
               </div>
               <div className="hp-pro-detail">
                 <div className="hp-pro-info">
-                  <p className="hp-prj-title">Modern Kitchen</p>
+                  <p className="hp-prj-title">Modern Balcony</p>
                   <p className="hp-prj-path">Decor / Architecture</p>
+                  <p>Transform your modern balcony into a serene retreat with elegant seating, lush greenery, and ambient lighting. Whether it’s a cozy coffee corner or a stylish outdoor lounge, our designs maximize space, comfort, and aesthetics, creating the perfect spot to unwind.
+
+</p>
                 </div>
                 <div className="hp-pro-btn">
                   <Link to={`/project-details`}>
@@ -242,8 +259,11 @@ export function Home() {
               </div>
               <div className="hp-pro-detail">
                 <div className="hp-pro-info">
-                  <p className="hp-prj-title">Modern Kitchen</p>
+                  <p className="hp-prj-title">Modern Corrido</p>
                   <p className="hp-prj-path">Decor / Architecture</p>
+                  <p>
+                  A modern corridor is more than just a passage—it’s an integral part of your home’s aesthetic. With sleek lighting, stylish wall textures, and functional layouts, our designs enhance connectivity while adding a touch of sophistication to your interiors.
+                  </p>
                 </div>
                 <div className="hp-pro-btn">
                   <Link to={`/project-details`}>
@@ -278,8 +298,7 @@ export function Home() {
       <div className="articleNews">
         <h1>Articles & News</h1>
         <p>
-          It is a long established fact that a reader will be distracted by the
-          of readable content of a page when lookings at its layouts
+        Stay informed with the latest trends, insights, and updates in the world of design and architecture. Explore expert opinions, industry news, and innovative ideas that inspire modern living.
         </p>
         <div className="articles">
           <div className="article nochosen" onClick={handleChange}>
@@ -289,7 +308,7 @@ export function Home() {
             <div className="article-content">
               <p>Let’s Get Solution For Building Construction Work</p>
               <div className="ac-detail">
-                <p className="ac-date">3 March 2023</p>
+                <p className="ac-date">27 June 2023</p>
                 <Link to={`/blog-details`}>
                   <button>
                     <IoIosArrowForward />
@@ -305,7 +324,7 @@ export function Home() {
             <div className="article-content">
               <p>Let’s Get Solution For Building Construction Work</p>
               <div className="ac-detail">
-                <p className="ac-date">3 March 2023</p>
+                <p className="ac-date">30 March 2023</p>
                 <Link to={`/blog-details`}>
                   <button>
                     <IoIosArrowForward />
@@ -321,7 +340,7 @@ export function Home() {
             <div className="article-content">
               <p>Let’s Get Solution For Building Construction Work</p>
               <div className="ac-detail">
-                <p className="ac-date">3 March 2023</p>
+                <p className="ac-date">3 January 2023</p>
                 <Link to={`/blog-details`}>
                   <button>
                     <IoIosArrowForward />

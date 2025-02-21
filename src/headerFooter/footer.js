@@ -25,8 +25,7 @@ export function Footer() {
           </div>
           <div className="f-about-text">
             <p>
-              It is a long established fact that a reader will be distracted
-              lookings.
+            Our logo represents innovation, elegance, and a commitment to excellence. Designed with precision, it embodies our vision and dedication to creating timeless and inspiring spaces.
             </p>
           </div>
           <div className="f-smedia">

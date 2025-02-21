@@ -1,8 +1,29 @@
-{"services" : [
-    {"service_name": "Project Plan", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."},
-    {"service_name": "Interior Work", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."},
-    {"service_name": "Retail Design", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."},
-    {"service_name": "2d/3d Art Work", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."},
-    {"service_name": "Interior Work", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."},
-    {"service_name": "Decoration Work", "service_content": "There are many variations of the passages of lorem Ipsum from available, majority."}
-]}
+{
+    "services": [
+      {
+        "service_name": "Project Planning",
+        "service_content": "We offer comprehensive project planning services, ensuring a seamless execution from concept to completion. Our team carefully analyzes  budgets to create a structured plan tailored to your needs."
+      },
+      {
+        "service_name": "Interior Design",
+        "service_content": "Our interior design services focus on creating aesthetically pleasing and functional spaces. We blend creativity with practicality to deliver customized interiors that enhance both comfort and elegance."
+      },
+      {
+        "service_name": "Retail Space Design",
+        "service_content": "We specialize in designing retail spaces that enhance customer experience and maximize business potential. Our innovative layouts and visual merchandising strategies ensure a welcoming and engaging shopping environment."
+      },
+      {
+        "service_name": "2D/3D Visualization",
+        "service_content": "Our 2D and 3D visualization services help clients visualize their projects with realistic renderings. We create detailed design concepts, allowing for better decision-making before the execution phase begins."
+      },
+      {
+        "service_name": "Custom Interior Solutions",
+        "service_content": "We provide personalized interior solutions that align with your preferences and lifestyle. From residential to commercial spaces, our designs reflect elegance, functionality, and modern aesthetics."
+      },
+      {
+        "service_name": "Decorative Enhancements",
+        "service_content": "Our decoration services focus on adding artistic elements and stylish finishes to interiors. We carefully select materials, textures, and accessories to create visually appealing and harmonious spaces."
+      }
+    ]
+  }
+  

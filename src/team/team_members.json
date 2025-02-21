@@ -1,10 +1,10 @@
 {"members" : [
-    {"fullname": "Charlotte Levi", "job": "Design", "country": "Australia", "image":"m0", "mail":"levi@email.com"},
-    {"fullname": "Nattasha Julie", "job": "Design", "country": "Australia", "image":"m1", "mail":"levi@email.com"},
-    {"fullname": "John Smith", "job": "Design", "country": "Australia", "image":"m2", "mail":"levi@email.com"},
-    {"fullname": "Nora Owen", "job": "Design", "country": "Australia", "image":"m3", "mail":"levi@email.com"},
-    {"fullname": "Avery Jackson", "job": "Design", "country": "Australia", "image":"m4", "mail":"levi@email.com"},
-    {"fullname": "Sofia Carter", "job": "Design", "country": "Australia", "image":"m5", "mail":"levi@email.com"},
-    {"fullname": "Glanna Mateo", "job": "Design", "country": "Australia", "image":"m6", "mail":"levi@email.com"},
-    {"fullname": "Luna James", "job": "Design", "country": "Australia", "image":"m7", "mail":"levi@email.com"}
+    {"fullname": "Aadvik Sharma", "job": "Interior Design Project Manager", "country": "India", "image":"m0", "mail":"vermahrishka@email.com"},
+    {"fullname": "Nattasha singh", "job": "Construction Project Manager", "country": "India", "image":"m1", "mail":"nats@email.com"},
+    {"fullname": "John Fernandis", "job": " Furniture & Decor Specialist", "country": "Australia", "image":"m2", "mail":"john@email.com"},
+    {"fullname": "Jacky fernandis", "job": " Architectural 3D Artist", "country": "U.S.A", "image":"m3", "mail":"jacky@email.com"},
+    {"fullname": "Paritosh Shah", "job": "Luxury Interior Consultant", "country": "India", "image":"m4", "mail":"Pariitosh@email.com"},
+    {"fullname": "Sofia Khan", "job": "Furniture & Decor Specialist", "country": "Iran", "image":"m5", "mail":"sofia@email.com"},
+    {"fullname": "Gagan Singh", "job": "Color & Texture Consultant", "country": "India", "image":"m6", "mail":"singhgagn@email.com"},
+    {"fullname": "Laksh verma", "job": "Lighting & Ambiance Designer", "country": "India", "image":"m7", "mail":"laksh@email.com"}
 ]}

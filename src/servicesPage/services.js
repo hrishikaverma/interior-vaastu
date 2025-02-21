@@ -70,8 +70,7 @@ export function Services() {
         <div className="how-title">
           <h1>How We Work</h1>
           <p>
-            It is a long established fact will be distracted.Lorem Ipsum is
-            simply dummy text of the printing and typesetting industry.
+          At iVaastu , we follow a strategic and client-focused approach to bring your vision to life. Our process is designed to ensure seamless execution, attention to detail, and excellence at every step. From concept to completion, we prioritize innovation, functionality, and aesthetics, delivering spaces that are both inspiring and practical. With a commitment to quality craftsmanship and personalized service, we transform ideas into reality while keeping your needs at the center of our work.
           </p>
         </div>
         <div className="how-content">
@@ -85,7 +84,7 @@ export function Services() {
                 </div>
                 <div className="hc-subtext">
                     <h2>Concept & Details</h2>
-                    <p>It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry. </p>
+                    <p>Every great design begins with a strong concept. We meticulously craft each detail to ensure a perfect blend of functionality and aesthetics. Our approach involves deep research, innovative ideas, and a keen eye for precision, bringing your vision to life with elegance and purpose. </p>
                 </div>
             </div>
         </div>
@@ -98,7 +97,7 @@ export function Services() {
                 </div>
                 <div className="hc-subtext">
                     <h2>Idea for work</h2>
-                    <p>It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry. </p>
+                    <p>Great designs start with a clear vision. We blend creativity with practicality to develop unique, functional, and visually appealing spaces. Our process is driven by research, innovation, and attention to detail, ensuring every project is both inspiring and purposeful. </p>
                 </div>
             </div>
             <div className="hc-img">
@@ -117,7 +116,7 @@ export function Services() {
                 </div>
                 <div className="hc-subtext">
                     <h2>Design</h2>
-                    <p>It is a long established fact  will be distracted. Lorem Ipsum is simply dummy from text of the and typesetting indufstry. </p>
+                    <p>Our design philosophy revolves around aesthetics, functionality, and harmony. We craft visually stunning spaces that reflect your personality while ensuring comfort and efficiency. Every element is thoughtfully curated to bring balance, elegance, and timeless appeal to your interiors. </p>
                 </div>
             </div>
         </div>

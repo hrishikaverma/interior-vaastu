@@ -15,7 +15,7 @@ export function ProjectDetails() {
             <tbody>
               <tr>
                 <td>Client</td>
-                <td>Your client name</td>
+                <td>Akshay Kapoor</td>
               </tr>
               <tr>
                 <td>Category</td>
@@ -27,11 +27,11 @@ export function ProjectDetails() {
               </tr>
               <tr>
                 <td>Date</td>
-                <td>23.02.2023</td>
+                <td>23.02.2024</td>
               </tr>
               <tr>
                 <td>Link</td>
-                <td>Link example.com</td>
+                <td>example.com</td>
               </tr>
             </tbody>
           </Table>
@@ -39,19 +39,18 @@ export function ProjectDetails() {
         <div className="d-project-info">
           <h2>Minimal Look Bedrooms</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquamsem
-            vitae turpis dignissim maximus. Aliquam sollicitudin tellumassa,
-            vbel maximus purus posuere in. Dojrices gravida dignissim. Praesent
-            at nibh in mi fringilla mattis. Phasellus ut dolor odio. Aenean in
-            the ipsum vel lectus bibendum commodo.
+          A minimalistic bedroom design embraces simplicity, functionality, and elegance, creating a serene and clutter-free space. Our approach focuses on clean lines, neutral color palettes, and carefully selected furnishings to enhance both comfort and style.
+
+A well-balanced combination of space optimization and refined aesthetics ensures a peaceful and relaxing environment. We prioritize natural lighting, high-quality materials, and smart storage solutions to maintain an open and airy feel. Each element is thoughtfully curated to achieve a harmonious blend of modern sophistication and cozy warmth, making your bedroom a true sanctuary of tranquility.
             <br />
             <br />
-            In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras amet
-            tellus lectus. Vivamus ipsum nunc, mattis quis nibh id, pellentesque
-            arcu. Donec a pellentesque Cras erat enim, gravida non ante
-            vitae,elequis convallis elit, in viverra felis. Donec ultrices
-            tellus vitae iaculisvd porta. Proin tincidunt ligula id purus
-            porttitor.
+            Benefits of a Minimal Look Bedroom:
+✨ Encourages Relaxation – A clean and simple space reduces stress and promotes better sleep.
+✨ Enhances Functionality – Every item serves a purpose, making the room practical and efficient.
+✨ Timeless Elegance – A minimalist design never goes out of style, ensuring your space looks modern and sophisticated for years to come.
+✨ Easy to Maintain – Less clutter means less cleaning, allowing you to focus on enjoying your space.
+
+By incorporating these elements, a minimal look bedroom becomes a perfect retreat, offering a harmonious balance of comfort and sophistication. Whether you prefer a contemporary aesthetic or a warm and cozy feel, minimalism allows for endless creativity while maintaining a sense of calm and order.
           </p>
         </div>
       </div>

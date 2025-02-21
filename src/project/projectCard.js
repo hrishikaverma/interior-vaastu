@@ -1,5 +1,6 @@
 import "./projectCard.css";
 import project1 from "../images/project/project1.jpg";
+
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 
