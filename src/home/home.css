@@ -238,13 +238,13 @@
     margin-right: 5%;
 }
 .person-title>div>img{
-    width: 100%;
+    width: 35px;
     border-radius: 50%;
 }
 
 .person-title>p {
     font-family: 'Dm Serif Display';
-    font-size: 17px;
+    font-size: 13px;
     width: 100%;
 }
 
@@ -296,7 +296,7 @@
 }
 
 .hp-pro-img>img {
-    border-radius: 30px;
+    border-radius: 50%;
     width: 100%;
 }
 

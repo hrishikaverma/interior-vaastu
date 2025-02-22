@@ -1,5 +1,23 @@
-{"people": [
-    {"fullname":"Nattasha Rajput", "country":"Banglore,India", "thoughts":"An exceptional experience! Highly satisfied with the service and professionalism."},
-    {"fullname":"Aditya Sharma", "country":"Raipur, India", "thoughts":"Outstanding quality and attention to detail. Truly impressed with the expertise."},
-    {"fullname":"Harsh Vardhane", "country":"Indore, India", "thoughts":"Remarkable service and seamless execution. Highly recommended!"}
-]}
+{
+    "people": [
+      {
+        "fullname": "Nattasha Rajput",
+        "country": "Bangalore, India",
+        "thoughts": "An exceptional experience! Highly satisfied with the service and professionalism.",
+        "image": "customer.jpg"
+      },
+      {
+        "fullname": "Aditya Sharma",
+        "country": "Raipur, India",
+        "thoughts": "Outstanding quality and attention to detail. Truly impressed with the expertise.",
+        "image": "customer2.jpg"
+      },
+      {
+        "fullname": "Harsh Vardhane",
+        "country": "Indore, India",
+        "thoughts": "Remarkable service and seamless execution. Highly recommended!",
+        "image": "customer3.jpg"
+      }
+    ]
+  }
+  
