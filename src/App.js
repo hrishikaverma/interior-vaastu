@@ -1,38 +1,48 @@
-import './App.css';
-import { Contact } from './contact/contact';
-import { Header } from './headerFooter/header';
-import { Footer } from './headerFooter/footer';
-import { RestrictedPage } from './restrictedPage/restricted';
-import { PricingPlan } from './pricingPlan/pricingPlan';
-import { Faq } from './faq/faq';
-import { ProjectDetails } from './projectDetails/projectDetails';
-import { Team } from './team/team';
-import { TeamSingle } from './teamSingle/teamSingle';
-import { About } from './about/about';
-import { NotFound } from './404/404';
-import { BlogDetails } from './blogDetails/blogDetails';
-import { Services } from './servicesPage/services';
-import { ServiceSingle } from './serviceSingle/serviceSingle';
-import { Home } from './home/home';
-import { Blog } from './blog/blog';
-import { Project } from './project/project';
-import { Terms } from './Allterms/terms';
-import { Cookies } from './Allterms/cookies';
-import { Privacy } from './Allterms/privacy';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { SmoothScroll } from './smooth';
-
-// 🔹 Admin Panel Routes Import
-import AdminRoutes from './admin/AdminRoutes';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Contact } from "./contact/contact";
+import { Header } from "./headerFooter/header";
+import { Footer } from "./headerFooter/footer";
+import { RestrictedPage } from "./restrictedPage/restricted";
+import { PricingPlan } from "./pricingPlan/pricingPlan";
+import { Faq } from "./faq/faq";
+import { ProjectDetails } from "./projectDetails/projectDetails";
+import { Team } from "./team/team";
+import { TeamSingle } from "./teamSingle/teamSingle";
+import { About } from "./about/about";
+import { NotFound } from "./404/404";
+import { BlogDetails } from "./blogDetails/blogDetails";
+import { Services } from "./servicesPage/services";
+import { ServiceSingle } from "./serviceSingle/serviceSingle";
+import { Home } from "./home/home";
+import { Blog } from "./blog/blog";
+import { Project } from "./project/project";
+import { Terms } from "./Allterms/terms";
+import { Cookies } from "./Allterms/cookies";
+import { Privacy } from "./Allterms/privacy";
+import { SmoothScroll } from "./smooth";
+import AdminRoutes from "./admin/AdminRoutes";
+import { fetchMessage } from "./api/api"; // ✅ Import API function
 
 function App() {
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const getMessage = async () => {
+      const data = await fetchMessage();
+      setMessage(data.message);
+    };
+    getMessage();
+  }, []);
+
   return (
     <BrowserRouter>
       <SmoothScroll />
       <Header />
       <Routes>
         {/* ✅ Public Routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home message={message} />} /> {/* ✅ Message Prop Pass */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/restricted-page" element={<RestrictedPage />} />
         <Route path="/pricing" element={<PricingPlan />} />
