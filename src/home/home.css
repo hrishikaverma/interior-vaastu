@@ -19,12 +19,12 @@
     width: 30%;
     font-size: 50px;
     margin: 0;
-    color:burlywood;
+    color:rgb(63, 53, 197);
 }
 
 .homeNews>p {
     width: 40%;
-    color:burlywood;
+    color:rgb(153, 25, 153);
     font-family: 'Jost';
 }
 

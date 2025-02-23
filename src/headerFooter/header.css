@@ -11,7 +11,7 @@ a {
 
 .header-logo-text{
     font-family: 'DM Serif Display';
-    font-size: 22px;
+    font-size: 15px;
     width: 30%;
     display: flex;
     flex-direction: row;
@@ -20,7 +20,12 @@ a {
 }
 
 .header-text{
-    width: 80%;
+    font-size: 3rem; /* Adjust as per requirement */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-align: center; /* Align to center */
+  width: 100%; /* Full width */
+  display: block; /* Ensure it behaves as a block */
 }
 
 .header-logo {
@@ -49,3 +54,9 @@ a {
 .header-pages>ul>li{
     margin-right: 6%;
 }
+@media screen and (max-width: 768px) {
+    .heading-text {
+      font-size: 2rem; /* Reduce size for small screens */
+    }
+  }
+  
