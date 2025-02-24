@@ -169,3 +169,12 @@
 iframe {
     border-radius: 20px;
 }
+.status-message.success {
+    color: green;
+    font-weight: bold;
+  }
+  .status-message.error {
+    color: red;
+    font-weight: bold;
+  }
+  

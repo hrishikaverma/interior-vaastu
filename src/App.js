@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Contact } from "./contact/contact";
+import Contact from "./contact/contact";
+
 import { Header } from "./headerFooter/header";
 import { Footer } from "./headerFooter/footer";
 import { RestrictedPage } from "./restrictedPage/restricted";

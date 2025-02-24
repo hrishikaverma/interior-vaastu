@@ -1,139 +1,67 @@
-import { useState } from "react";
-import "./contact.css";
-import { GiWorld } from "react-icons/gi";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsTelephone, BsArrowRight } from "react-icons/bs";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import React, { useState } from "react";
+import axios from "axios";
 
-export function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     fullname: "",
-    mail: "",
+    mail: "",       // ✅ 'email' ko 'mail' kar diya
     subject: "",
     phone: "",
-    interested: "",
+    interested: "", // ✅ 'message' ko 'interested' kar diya
   });
-  const [status, setStatus] = useState("");
 
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
+  // Handle Input Change
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setStatus("Sending...");
-  try {
-    const response = await fetch("https://interior-vaastu.onrender.com/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-    const result = await response.json();
-    
-    if (response.ok) {
-      setStatus(result.message);
-      setFormData({ fullname: "", mail: "", subject: "", phone: "", interested: "" }); // Clearing input fields
-    } else {
-      setStatus("Failed to send message. Try again later.");
+  // Handle Form Submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setMessage("");
+    setError("");
+
+    try {
+      const response = await axios.post("http://localhost:5000/api/contact", formData);
+      setMessage(response.data.message || "Message sent successfully!");
+      setFormData({ fullname: "", mail: "", subject: "", phone: "", interested: "" }); // ✅ Clear form
+    } catch (err) {
+      setError(err.response?.data?.message || "Failed to send message. Try again.");
     }
-  } catch (error) {
-    setStatus("Failed to send message. Try again later.");
-  }
-};
+  };
 
   return (
-    <div className="contact">
-      <div className="contact-header">
-        <h1>
-          Contact Us<p>Home / Contact</p>
-        </h1>
-      </div>
-      <div className="contact-content">
-        <h2>We love meeting new people and helping them.</h2>
-        <div className="contact-form">
-          <div className="contact-form-info">
-            <div className="icons">
-              <p>
-                <span className="icon">
-                  <HiOutlineMail />
-                </span>
-                <a href="mailto: info@yourdomain.com">infovaastu.com</a>
-              </p>
-              <p>
-                <span className="icon">
-                  <BsTelephone />
-                </span>
-                +1 (378) 400-1234
-              </p>
-              <p>
-                <span className="icon">
-                  <GiWorld />
-                </span>
-                <a href="www.yourdomain.com">www.ivaastu.com</a>
-              </p>
-            </div>
-            <div className="contact-smedias">
-              <ul>
-                <li>
-                  <a href="https://www.facebook.com/">
-                    <FaFacebookF />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com/">
-                    <FaInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.twitter.com/">
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.linkedin.com/">
-                    <FaLinkedin />
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <form className="contact-form-fill" onSubmit={handleSubmit}>
-            <div className="nameEmail">
-              <input name="fullname" placeholder="Name" onChange={handleChange} required />
-              <input id="email" name="mail" type="email" placeholder="Email" onChange={handleChange} required />
-            </div>
-            <div className="subjectPhone">
-              <input name="subject" placeholder="Subject" onChange={handleChange} required />
-              <input name="phone" type="tel" placeholder="Phone" onChange={handleChange} required />
-            </div>
-            <div className="interested">
-              <textarea name="interested" placeholder="Hello, I am interested in.." onChange={handleChange} required />
-            </div>
-            <div className="send">
-              <button type="submit">
-                Send Now
-                <BsArrowRight style={{ marginLeft: "5px" }} color="#CDA274" />
-              </button>
-            </div>
-            {status && <p className="status-message">{status}</p>}
-          </form>
-        </div>
-      </div>
-      <div className="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.778093439049!2d75.7883262253185!3d23.178297829064938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963746c22ca8cc3%3A0xf7d4b0c90714b6b6!2sFreeganj%2C%20Madhav%20Nagar%2C%20Ujjain%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1739957199775!5m2!1sen!2sin"
-          title="map"
-          style={{ width: "800px", height: "350px", border: "0" }}
-          allowFullScreen=""
-          aria-hidden="false"
-          tabIndex="0"
-        ></iframe>
-      </div>
+    <div style={{ maxWidth: "500px", margin: "auto", padding: "20px", border: "1px solid #ddd", borderRadius: "8px" }}>
+      <h2>Contact Us</h2>
+      
+      {message && <p style={{ color: "green", fontWeight: "bold" }}>{message}</p>}
+      {error && <p style={{ color: "red", fontWeight: "bold" }}>{error}</p>}
+
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name" onChange={handleChange} value={formData.fullname} required />
+
+        <label htmlFor="mail">Email</label>
+        <input type="email" id="mail" name="mail" placeholder="Email" onChange={handleChange} value={formData.mail} required />
+
+        <label htmlFor="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" onChange={handleChange} value={formData.subject} required />
+
+        <label htmlFor="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Phone" onChange={handleChange} value={formData.phone} required />
+
+        <label htmlFor="interested">Message</label>
+        <textarea id="interested" name="interested" placeholder="Your message" onChange={handleChange} value={formData.interested} required />
+
+        <button type="submit" style={{ marginTop: "10px", padding: "10px", background: "#007bff", color: "white", border: "none", cursor: "pointer" }}>
+          Send Message
+        </button>
+      </form>
     </div>
   );
-}
+};
+
+export default Contact;
