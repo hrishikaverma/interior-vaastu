@@ -2,61 +2,143 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Distribute space properly */
+    padding: 8px 4%;
+    background-color: #fff; /* Optional: Add background for visibility */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: fixed; /* Keep header fixed */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-
+#root .header{
+    height:68px;
+    border-width:67px;
+   }
+   
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+    transition: color 0.3s ease-in-out;
+    
+
 }
 
-.header-logo-text{
-    font-family: 'DM Serif Display';
-    font-size: 15px;
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 13%;
+a:hover {
+    color: #555; /* Subtle hover effect */
 }
 
-.header-text{
-    font-size: 3rem; /* Adjust as per requirement */
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-align: center; /* Align to center */
-  width: 100%; /* Full width */
-  display: block; /* Ensure it behaves as a block */
-}
-
+/* Logo and Branding */
 .header-logo {
     display: flex;
-    width: 40%;
     align-items: center;
+    width: 25%; /* Adjust width to balance spacing */
 }
 
-.header-logo>img{
-    width: 100%;
+.header-logo img {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
 }
 
+/* Logo Text */
+.header-logo-text {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Navigation */
 .header-pages {
-    width: 55%;
+    width: 50%;
     display: flex;
+    justify-content: center;
 }
 
-.header-pages>ul{
-    list-style-type: none;
-    font-family: Jost;
-    font-weight: 400;
+.header-pages ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;
+    gap: 30px; /* Maintain consistent spacing */
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
 }
 
-.header-pages>ul>li{
-    margin-right: 6%;
+.header-pages ul li {
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 768px) {
-    .heading-text {
-      font-size: 2rem; /* Reduce size for small screens */
+
+.header-pages ul li:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Header Text */
+.header-text {
+    font-size: 2.5rem; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 3%;
     }
-  }
-  
+
+    .header-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-pages {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .header-pages ul {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .header-text {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 2%;
+    }
+
+    .header-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-pages {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-pages ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .header-text {
+        font-size: 1.8rem;
+    }
+}
