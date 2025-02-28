@@ -205,3 +205,38 @@ a:hover {
       }
       
 }
+/* Login & Register Buttons */
+.btn-login, .btn-register {
+    font-weight: bold;
+    border-radius: 5px;   /* Rounded corners */
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Ensure button behaves correctly */
+    text-align: center;
+}
+
+/* Login Button */
+.btn-login {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid transparent; /* Fix border issue */
+    text-align: center;
+    min-width: 75px;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+/* Register Button */
+.btn-register {
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff; /* Ensure full border */
+    text-align: center;
+    min-width: 78px; /* Ensure button is fully visible */
+}
+
+.btn-register:hover {
+    background-color: #007bff;
+    color: white;
+}

@@ -25,29 +25,27 @@ export function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navigation Links & Search */}
+        {/* Navigation Links */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
-          <div className="nav-container">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/blog">Blog</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/services">Services</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
-              </li>
-            </ul>
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blog">Blog</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/services">Services</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
 
-            {/* Search Box */}
-            <form className="d-flex search-box">
-              <input className="form-control" type="search" placeholder="Search" />
-              <button className="btn btn-primary" type="submit">Search</button>
-            </form>
+          {/* Login & Register Buttons */}
+          <div className="d-flex gap-2">
+            <Link className="btn btn-login" to="/login">Login</Link>
+            <Link className="btn btn-register" to="/register">Register</Link>
           </div>
         </div>
       </div>

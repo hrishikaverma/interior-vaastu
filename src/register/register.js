@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./register.css";
+import photoBg from "../images/backgroung/register-bg.jpg"; // इमेज इम्पोर्ट
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -51,41 +52,55 @@ const Register = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit} className="register-form">
-        <div className="input-group">
-          <label>Name</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-          {errors.name && <span className="error">{errors.name}</span>}
-        </div>
+    <div 
+      className="register-container"
+      style={{
+        backgroundImage: `url(${photoBg})`, 
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      <div className="register-box">
+        <h2>Register</h2>
+        <form onSubmit={handleSubmit} className="register-form">
+          <div className="input-group">
+            <label>Name</label>
+            <input type="text" name="name" value={formData.name} onChange={handleChange} />
+            {errors.name && <span className="error">{errors.name}</span>}
+          </div>
 
-        <div className="input-group">
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-          {errors.email && <span className="error">{errors.email}</span>}
-        </div>
+          <div className="input-group">
+            <label>Email</label>
+            <input type="email" name="email" value={formData.email} onChange={handleChange} />
+            {errors.email && <span className="error">{errors.email}</span>}
+          </div>
 
-        <div className="input-group">
-          <label>Phone</label>
-          <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
-          {errors.phone && <span className="error">{errors.phone}</span>}
-        </div>
+          <div className="input-group">
+            <label>Phone</label>
+            <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
+            {errors.phone && <span className="error">{errors.phone}</span>}
+          </div>
 
-        <div className="input-group">
-          <label>Password</label>
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
-          {errors.password && <span className="error">{errors.password}</span>}
-        </div>
+          <div className="input-group">
+            <label>Password</label>
+            <input type="password" name="password" value={formData.password} onChange={handleChange} />
+            {errors.password && <span className="error">{errors.password}</span>}
+          </div>
 
-        <div className="input-group">
-          <label>Confirm Password</label>
-          <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
-          {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
-        </div>
+          <div className="input-group">
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} />
+            {errors.confirmPassword && <span className="error">{errors.confirmPassword}</span>}
+          </div>
 
-        <button type="submit" className="register-btn">Register</button>
-      </form>
+          <button type="submit" className="register-btn">Register</button>
+        </form>
+      </div>
     </div>
   );
 };
