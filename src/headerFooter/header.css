@@ -1,9 +1,8 @@
 .header {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between; /* Distribute space properly */
-    padding: 8px 4%;
+    padding: 8px 2%;
     background-color: #fff; /* Optional: Add background for visibility */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     position: fixed; /* Keep header fixed */
@@ -12,16 +11,15 @@
     z-index: 1000;
 }
 #root .header{
-    height:68px;
-    border-width:67px;
+    height:30px;
+    border-width:47px;
    }
    
 a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     transition: color 0.3s ease-in-out;
-    
-
+    width:35%;
 }
 
 a:hover {
@@ -52,15 +50,15 @@ a:hover {
 
 /* Navigation */
 .header-pages {
-    width: 50%;
+    width: 25%;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
 }
 
 .header-pages ul {
     list-style: none;
     display: flex;
-    gap: 30px; /* Maintain consistent spacing */
+    gap: 10px; /* Maintain consistent spacing */
     font-family: 'Jost', sans-serif;
     font-weight: 500;
     font-size: 18px;
@@ -68,7 +66,7 @@ a:hover {
 
 .header-pages ul li {
     position: relative;
-    padding: 5px 10px;
+    padding: 3px 2px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -141,4 +139,69 @@ a:hover {
     .header-text {
         font-size: 1.8rem;
     }
+}/* Navbar Container */
+.custom-navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Navbar Inner Container (Fixed Width 700px) */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px; /* Fixed width for desktop */
+    margin: 0 auto; /* Centering the navbar */
+}
+
+/* Navigation Links */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start; /* Left align */
+        width: 100%;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start; /* Left align links */
+        text-align: left;
+        width: 100%;
+        padding-left: 15px; /* Left padding for spacing */
+    }
+
+    .search-box {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .navbar-toggler {
+        border: none;
+        outline: none;
+      }
+      
 }

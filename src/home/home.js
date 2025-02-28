@@ -57,7 +57,7 @@ export function Home() {
           We blend creativity with Vaastu principles to craft spaces that reflect beauty, balance, and comfort.
         </p>
         <Link to="">
-          <button>
+          <button className="get-btn">
             Get Started
             <BsArrowRight style={{ marginLeft: "2%", color: "#CDA274" }} />
           </button>
@@ -69,18 +69,43 @@ export function Home() {
             .filter((services, index) => index < 3)
             .map((s, ind) => {
               return (
-                <div className="homePlan" key={ind}>
-                  <h2>{s.service_name}</h2>
-                  <p>{s.service_content}</p>
-                  <Link to={`/project-details`}>
-                    <button>
-                      Read More
-                      <BsArrowRight
-                        style={{ marginLeft: "4%", color: "#CDA274" }}
-                      />
-                    </button>
-                  </Link>
+                <div className="card shadow-lg border-0 rounded-4 me-3" style={{ overflow: "hidden" }} key={ind}>
+      
+                <div className="card-body text-center">
+                  <h5 className="card-title text-uppercase fw-bold" style={{ color: "#CDA274" }}>{s.service_name}</h5>
+                  <p className="card-text text-muted" style={{ fontSize: "0.9rem" }}>{s.service_content}</p>
+                  <Link 
+  to="/project-details" 
+  className="btn d-flex align-items-center gap-2"
+  style={{
+    backgroundColor: "#CDA274",
+    color: "#fff",
+    fontSize: "0.5rem",
+    fontWeight: "bold",
+    padding: "4px 4px",
+    borderRadius: "8px",
+    transition: "all 0.3s ease-in-out",
+    textDecoration: "none",
+    whiteSpace: "nowrap", // Ensures the text stays in one line
+    display: "inline-flex", // Aligns text and icon properly
+    alignItems: "center",
+    boxShadow: "0px 4px 10px rgba(0, 123, 255, 0.3)",
+    width:"50%"
+  }}
+  onMouseEnter={(e) => {
+    e.target.style.backgroundColor = "#0056b3";
+    e.target.style.boxShadow = "0px 6px 12px rgba(0, 86, 179, 0.4)";
+  }}
+  onMouseLeave={(e) => {
+    e.target.style.backgroundColor = "#007bff";
+    e.target.style.boxShadow = "0px 4px 10px rgba(0, 123, 255, 0.3)";
+  }}
+>
+  Read More <BsArrowRight />
+</Link>
+
                 </div>
+              </div>
               );
             })}
         </div>
@@ -112,7 +137,7 @@ export function Home() {
               <Link to={`/contact`}>
                 <button>
                   Get Free Estimate
-                  <BsArrowRight style={{ marginLeft: "2%", color: "#CDA274" }} />
+                  <BsArrowRight style={{ marginLeft: "1%", color: "#CDA274" }} />
                 </button>
               </Link>
             </div>

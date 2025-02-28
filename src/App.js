@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Contact from "./contact/contact";
+import Register from "./register/register";
+import Login from "./login/login";
 
 import { Header } from "./headerFooter/header";
 import { Footer } from "./headerFooter/footer";
@@ -44,6 +46,8 @@ function App() {
       <Routes>
         {/* ✅ Public Routes */}
         <Route path="/" element={<Home message={message} />} /> {/* ✅ Message Prop Pass */}
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/restricted-page" element={<RestrictedPage />} />
         <Route path="/pricing" element={<PricingPlan />} />
