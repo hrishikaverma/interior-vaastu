@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./register.css";
-import photoBg from "../images/backgroung/register-bg.jpg"; // इमेज इम्पोर्ट
+import photoBg from "../images/backgroung/register-bg.jpg"; 
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullname: "",
     email: "",
     phone: "",
     password: "",
@@ -12,6 +12,7 @@ const Register = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState(""); // ✅ API response ke liye
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,8 +20,7 @@ const Register = () => {
 
   const validateForm = () => {
     let newErrors = {};
-
-    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.fullname.trim()) newErrors.fullname = "Full Name is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Invalid email";
 
@@ -36,18 +36,36 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      alert("Registration Successful!");
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        password: "",
-        confirmPassword: "",
-      });
-      setErrors({});
+      try {
+        const response = await fetch("http://localhost:5000/api/register", { // ✅ Backend API
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullname: formData.fullname,
+            email: formData.email,
+            phone: formData.phone,
+            password: formData.password,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          setMessage("Registration Successful!");
+          setFormData({ fullname: "", email: "", phone: "", password: "", confirmPassword: "" });
+          setErrors({});
+        } else {
+          setMessage(data.message || "Something went wrong");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setMessage("Server error. Please try again.");
+      }
     }
   };
 
@@ -67,11 +85,12 @@ const Register = () => {
     >
       <div className="register-box">
         <h2>Register</h2>
+        {message && <p className="message">{message}</p>} {/* ✅ API response message */}
         <form onSubmit={handleSubmit} className="register-form">
           <div className="input-group">
-            <label>Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange} />
-            {errors.name && <span className="error">{errors.name}</span>}
+            <label>Full Name</label>
+            <input type="text" name="fullname" value={formData.fullname} onChange={handleChange} />
+            {errors.fullname && <span className="error">{errors.fullname}</span>}
           </div>
 
           <div className="input-group">
