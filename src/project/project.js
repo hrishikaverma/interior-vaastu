@@ -1,12 +1,12 @@
 import "./project.css";
 import { ProjectCard } from "./projectCard";
-import { useState } from "react";
 import projects from "./projects.json";
 
+
 export function Project() {
-  const [data] = useState(projects.projects);
-  const [currentPage] = useState(1);
-  const [postPerPage] = useState(8);
+  const data = projects.projects; // useState ki zaroorat nahi hai
+  const currentPage = 1;
+  const postPerPage = 8;
 
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
