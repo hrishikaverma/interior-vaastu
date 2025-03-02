@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import axios from "axios";
 import "./login.css";
-import photoBg from "../images/backgroung/login-bg.jpg"; 
+import photoBg from "../images/backgroung/login-bg.jpg";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +12,7 @@ const Login = () => {
 
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
+  const navigate = useNavigate(); // Initialize navigation
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,14 +32,28 @@ const Login = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccessMessage("");
 
     if (validateForm()) {
-      setSuccessMessage("Login Successful!");
-      setFormData({ email: "", password: "" });
-      setErrors({});
+      try {
+        const response = await axios.post("http://localhost:5000/api/auth/login", formData);
+
+        // Save Token in Local Storage
+        localStorage.setItem("token", response.data.token);
+
+        setSuccessMessage("Login Successful!");
+        setFormData({ email: "", password: "" });
+        setErrors({});
+
+        // Redirect to Home Page
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
+      } catch (error) {
+        setErrors({ general: "Invalid email or password. Please try again!" });
+      }
     }
   };
 
@@ -56,6 +73,7 @@ const Login = () => {
       <div className="login-container">
         <h2>Login</h2>
         {successMessage && <p className="success">{successMessage}</p>}
+        {errors.general && <p className="error">{errors.general}</p>}
         <form onSubmit={handleSubmit} className="login-form">
           <div className="input-group">
             <label>Email</label>

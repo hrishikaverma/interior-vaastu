@@ -40,7 +40,7 @@ const Register = () => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await fetch("http://localhost:5000/api/register", { // ✅ Backend API
+        const response = await fetch("http://localhost:5000/api/auth/register", { // ✅ Backend API
           method: "POST",
           headers: {
             "Content-Type": "application/json",

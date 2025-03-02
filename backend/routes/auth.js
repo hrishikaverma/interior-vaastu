@@ -7,6 +7,11 @@ require("dotenv").config(); // Load environment variables
 
 const router = express.Router();
 
+/**
+ * @route   POST /api/auth/register
+ * @desc    Register a new user
+ * @access  Public
+ */
 router.post(
   "/register",
   [
@@ -48,6 +53,50 @@ router.post(
       res.status(201).json({ message: "User registered successfully", token });
     } catch (error) {
       console.error("Error in Register Route:", error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  }
+);
+
+/**
+ * @route   POST /api/auth/login
+ * @desc    Login user and return JWT token
+ * @access  Public
+ */
+router.post(
+  "/login",
+  [
+    body("email").isEmail().withMessage("Valid email is required"),
+    body("password").notEmpty().withMessage("Password is required"),
+  ],
+  async (req, res) => {
+    // Validate Request Data
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const { email, password } = req.body;
+
+    try {
+      // Check if user exists
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(400).json({ message: "Invalid credentials" });
+      }
+
+      // Compare Password
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch) {
+        return res.status(400).json({ message: "Invalid credentials" });
+      }
+
+      // Generate JWT Token
+      const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: "7d" });
+
+      res.json({ message: "Login successful", token });
+    } catch (error) {
+      console.error("Error in Login Route:", error);
       res.status(500).json({ message: "Internal Server Error" });
     }
   }
