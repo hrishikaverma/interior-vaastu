@@ -57,19 +57,19 @@ export function Footer() {
           <p>Pages</p>
           <ul>
             <li>
-              <Link to={`/aboutus`}>About Us</Link>
+              <Link to={`/`}>Home</Link>
             </li>
             <li>
-              <Link to={`/projects`}>Our Projects</Link>
+              <Link to={`/blog`}>Blogs</Link>
             </li>
             <li>
-              <Link to={`/team`}>Our Team</Link>
-            </li>
-            <li>
-              <Link to={`/contact`}>Contact Us</Link>
+              <Link to={`/Projects`}>Projects</Link>
             </li>
             <li>
               <Link to={`/services`}>Services</Link>
+            </li>
+            <li>
+              <Link to={`/contact`}>Contact</Link>
             </li>
           </ul>
         </section>

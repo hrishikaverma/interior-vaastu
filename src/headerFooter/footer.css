@@ -1,152 +1,181 @@
+/* Footer Styling */
 .footer {
-    width: 100%;
-    bottom: 0;
-    right: 0;
+    background: #111; /* Dark theme for a premium look */
+    color: #fff;
+    padding: 50px 20px;
+    font-family: "Poppins", sans-serif;
 }
 
-.f-info{
-    width: 80%;
-    margin: 0 auto;
+.f-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
 }
 
-.f-social-medias {
-    width:30%;
-    padding-right: 8%;
-}
-
-.f-pages,.f-services {
-    width: 19%;
-}
-
-.f-logo-text{
-    font-family: 'DM Serif Display';
-    font-size: 22px;
+/* Logo Section */
+.f-logo-text {
     display: flex;
-    flex-direction: row;
-}
-
-.f-logo-text>a{
-    text-decoration: none;
-    color: black;
-}
-
-.f-text{
-    width: 80%;
-}
-
-.f-logo {
-    display: flex;
-    width: 40%;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.f-logo>img{
-    width: 100%;
+.f-logo img {
+    height: 40px;  /* Reduced size */
+    transition: transform 0.3s ease-in-out;
 }
 
-.f-about-text>p {
-    margin: 0;
-    font-family: Jost;
-    font-weight: 300;
-}
-
-.f-smedia {
-    margin: 8% 0;
-}
-
-.f-smedia>ul {
-    display: flex;
-    padding: 0;
-}
-
-.f-smedia>ul>li {
-    list-style-type: none;
-    margin-right: 15%;
-}
-
-.f-pages>p:first-child,
-.f-services>p:first-child,
-.f-contact>p:first-child{
-    font-family: 'DM Serif Display';
-    font-size: 18px;
-    color: #292F36;
-}
-
-.f-pages>ul>li>a,
-.f-services>ul>li>a,
-.f-contact>p>a,
-.f-contact>p{
-    font-family: 'Jost';
-    font-size: 15px;
-    color: #4D5053;
-}
-
-.f-pages>ul>li>a:hover,
-.f-services>ul>li>a:hover {
-    color: black;
-}
-
-.f-pages>ul>li,
-.f-services>ul>li {
-    margin-bottom: 10%;
-    list-style-type: none;
-}
-
-.f-pages>ul,
-.f-services>ul {
-    padding: 0;
+.f-logo img:hover {
+    transform: scale(1.05);
 }
 
 
-/* TERMS */
-.terms {
-    width: 60%;
-    margin: 0 auto;
-    display: flex;
+.f-about-text p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 280px;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.terms>ul {
-    width: 100%;
+/* Social Media Icons */
+.f-smedia ul {
     display: flex;
     justify-content: center;
     padding: 0;
-    margin: 5% 0 0 0;
+    gap: 12px;
+    margin-top: 15px;
 }
 
-.terms>ul>ol>a {
-    color: #4D5053;
-    font-size: 14px;
+.f-smedia li {
+    list-style: none;
+}
+
+.f-smedia a {
+    font-size: 18px;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.f-smedia a:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Pages and Services */
+.f-pages,
+.f-services,
+.f-contact {
+    flex: 1;
+    min-width: 180px;
+}
+
+.f-pages p,
+.f-services p,
+.f-contact p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.f-pages ul,
+.f-services ul {
+    list-style: none;
     padding: 0;
 }
 
-/* CONTACT */
-.f-contact {
-    width: 21%;
-    color: #4D5053;
-    font-family: 'Jost';
+.f-pages li,
+.f-services li {
+    margin-bottom: 8px;
 }
 
-/* COPY RIGHT */
+.f-pages a,
+.f-services a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
 
+.f-pages a:hover,
+.f-services a:hover {
+    color: #007bff;
+}
+
+/* Contact Section */
+.f-contact p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.f-contact a {
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.f-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Terms Section */
+.terms ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.terms a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.terms a:hover {
+    color: #007bff;
+}
+
+/* Copyright Section */
 .f-copyright {
     text-align: center;
-    color: #4D5053;
-    font-family: 'Jost';
+    margin-top: 20px;
     font-size: 14px;
-    font-family: 'Jost';
-    margin: 2% 0% 5% 0;
+    color: #bbb;
 }
 
-@media screen and (max-width: 768px) {
-    .f-social-medias {
-        width: 28%;
-        padding-right: 5%;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .f-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    /* TERMS */
-    .terms {
-        width: 100%;
+    .f-pages ul,
+    .f-services ul {
+        text-align: center;
+    }
+
+    .terms ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
     }
 }

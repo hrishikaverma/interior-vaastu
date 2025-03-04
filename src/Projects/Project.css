@@ -1,0 +1,185 @@
+/* General Container */
+.project-container h2 {
+  font-size: 3rem;  /* Increase font size */
+  font-weight: 700;  /* Bold text */
+  color: #222;  /* Dark color */
+  text-transform: uppercase;  /* Capital letters */
+  letter-spacing: 2px;  /* Increase spacing for elegance */
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+
+/* Animation Effect */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-container h2 {
+  animation: fadeInText 1s ease-in-out;
+}
+
+.project-container {
+  text-align: center;
+  padding: 50px;
+  background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+}
+
+.project-container h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Project Card */
+.project-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.3); /* Glass effect */
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image with Overlay */
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay Effect */
+.project-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.overlay .view-details {
+  padding: 10px 15px;
+  background: #ff9800;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.overlay .view-details:hover {
+  background: #e68900;
+}
+
+/* Project Card Content */
+.project-card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .overlay h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-container {
+    padding: 30px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .overlay h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-card {
+    width: 100%;
+  }
+
+  .overlay h3 {
+    font-size: 1.2rem;
+  }
+}

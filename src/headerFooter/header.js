@@ -35,13 +35,13 @@ export function Header() {
               <Link className="nav-link" to="/blog">Blog</Link>
             </li>
             <li className="nav-item">
+              <Link className="nav-link" to="/Projects">Project</Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/services">Services</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/contact">Contact</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/projects">Project</Link>
             </li>
           </ul>
 

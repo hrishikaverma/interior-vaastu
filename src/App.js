@@ -4,7 +4,6 @@ import "./App.css";
 import Contact from "./contact/contact";
 import Register from "./register/register";
 import Login from "./login/login";
-
 import { Header } from "./headerFooter/header";
 import { Footer } from "./headerFooter/footer";
 import { RestrictedPage } from "./restrictedPage/restricted";
@@ -20,7 +19,7 @@ import { Services } from "./servicesPage/services";
 import { ServiceSingle } from "./serviceSingle/serviceSingle";
 import { Home } from "./home/home";
 import { Blog } from "./blog/blog";
-import { Project } from "./project/project";
+import Project from './Projects/project';
 import { Terms } from "./Allterms/terms";
 import { Cookies } from "./Allterms/cookies";
 import { Privacy } from "./Allterms/privacy";
@@ -61,7 +60,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/service-single" element={<ServiceSingle />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/projects" element={<Project />} />
+        <Route path="/Projects" element={<Project />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies-policy" element={<Cookies />} />
         <Route path="/privacy-policy" element={<Privacy />} />

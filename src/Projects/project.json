@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Modern Living Room",
+    "description": "A beautiful and modern living room design.",
+    "image": "project1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Luxury Bedroom",
+    "description": "A stylish and luxurious bedroom setup.",
+    "image": "project2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Minimalist Kitchen",
+    "description": "A sleek and modern kitchen with minimal design.",
+    "image": "project3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Elegant Dining Area",
+    "description": "A spacious dining area with a classic touch.",
+    "image": "project4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Cozy Home Office",
+    "description": "A comfortable workspace with an ergonomic setup.",
+    "image": "project5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Outdoor Garden Space",
+    "description": "A peaceful outdoor garden with natural elements.",
+    "image": "project6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Modern Bathroom",
+    "description": "A stylish bathroom with contemporary fixtures.",
+    "image": "project7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Luxury Apartment",
+    "description": "A high-end apartment with modern interiors.",
+    "image": "project8.jpg"
+  }
+]
