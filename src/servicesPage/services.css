@@ -1,195 +1,162 @@
+/* General Styling */
 .services {
     width: 100%;
+    padding: 5% 0;
+    background-color: #F9F9F9;
 }
 
+/* Header Section */
 .services-header {
-  width: 100%;
-  min-height: 70vh;
-  background-image: url("../images/backgroung/servicesBg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  text-align: center;
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/backgroung/servicesBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 40%;
+    padding-top: 25%;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.services-header > h1 {
-  width: 20%;
-  margin: 0;
-  padding: 2% 3% 0.5% 3%;
-  background-color: white;
-  color: #292f36;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+.services-header h1 {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #292F36;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.services-header > h1 > p {
-  color: #4d5053;
-  font-size: 14px;
-  font-family: Jost;
+.services-header p {
+    font-size: 16px;
+    color: #4d5053;
+    margin-top: 5px;
 }
 
-/* SERVICE TYPES */
+/* Service Types */
 .service-types {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: 5% auto;
+    gap: 20px;
+    justify-content: center;
 }
 
 .service-type {
-    width: 100%;
-    display: flex;
-    flex: 1 1 200px;
-    flex-direction: column;
-    justify-content: center;
-    padding: 5% 3%;
+    width: 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
     text-align: center;
-    align-items: center;
-    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .selected-type {
     background-color: #F4F0EC;
 }
 
-.service-type>h2 {
-    font-family: 'Dm Serif Display';
-    margin: 0;
-    color: #292f36;
+.service-type h2 {
+    font-family: 'DM Serif Display';
+    color: #292F36;
 }
 
-.service-type>p {
+.service-type p {
     font-family: 'Jost';
     color: #4d5053;
+    font-size: 15px;
 }
 
-.service-type>a{
-    width: 50%;
-}
-
-.service-type>a>button{
-    background-color: transparent;
+.service-type a button {
+    background-color: #CDA274;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
     border: none;
-    width: 100%;
+    font-weight: bold;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Jost';
-    font-size: 14px;
-    font-weight: 600;
-    color: #292f36;
+    transition: background 0.3s ease;
 }
 
-/* HOW WE WORK */
+.service-type a button:hover {
+    background-color: #B08B60;
+}
+
+/* How We Work Section */
 .howWeWork {
-    color: #292f36;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3% auto;
+    width: 60%;
     background-color: #F4F0EC;
     border-radius: 30px;
-    padding: 7% 5%;
+    padding: 5%;
+    margin: 3% auto;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.howWeWork h1 {
+    color: #292F36;
+}
+
+.howWeWork p {
+    font-size: 16px;
+    color: #4d5053;
 }
 
 .how-content {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: 7% 0% 3% 0%;
-}
-
-.hc-img {
-    width: 50%;
-    object-fit: cover;
-}
-
-.hc-img>img {
-    width: 100%;
-    border-top-right-radius: 25%;
-    border-bottom-left-radius: 70%;
-}
-
-.how-title {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-}
-
-.how-title>h1 {
-    margin: 0;
-}
-
-.how-title>p {
-    font-family: 'Jost';
-    color: #4d5053;
-}
-
-.hc-text {
-    margin: 0% 5%;
-    width: 45%;
-}
-
-.hc-text-anima {
-    display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+.hc-img img {
     width: 100%;
-    margin: 0 0 5% 0;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
-.hc-text-anima>img {
-    width: 25%;
+.hc-img img:hover {
+    transform: scale(1.05);
 }
 
-.hc-text-anima>p {
-    font-size: 20vh;
-    font-family: 'Dm Serif Display';
-    margin: 0;
-    color: white;
-}
-
-.hc-subtext>p {
-    color: #4d5053;
-    font-size: 14px;
-}
-
-/* INTERNO */
+/* Interno Section */
 .interno {
     width: 60%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 10% auto;
-    padding: 3% 0;
     background-color: #292F36;
-    border-radius: 50px;
     color: white;
+    text-align: center;
+    padding: 5% 0;
+    margin: 10% auto;
+    border-radius: 30px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.interno>h1 {
-    margin: 0;
-    color: white;
+.interno h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-.interno>a {
-    width: 22%;
-    margin: 3% 0%;
-}
-
-.interno>a>button {
-    color: white;
-    width: 100%;
-    padding: 8% 0%;
-    border-radius: 15px;
-    border: none;
+.interno a button {
     background-color: #CDA274;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 15px;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.interno a button:hover {
+    background-color: #B08B60;
 }
