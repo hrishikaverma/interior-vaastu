@@ -97,7 +97,7 @@ export function Footer() {
           <p>Contact</p>
           <p>123 Freeganj Ujjain, MP, India 456001</p>
           <p>
-            <a href="mailto: hrishikaverma71@gmail.com">hrishikaverma71@gmail.com</a>
+            <a href="mailto: ivaastu@gmail.com">ivaastu@gmail.com</a>
           </p>
           <p>+91 98765 43210</p>
         </section>
