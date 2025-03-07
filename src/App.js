@@ -13,6 +13,7 @@ import { ProjectDetails } from "./projectDetails/projectDetails";
 import { Team } from "./team/team";
 import { TeamSingle } from "./teamSingle/teamSingle";
 import { About } from "./about/about";
+import Prices from "./pricing/Prices";
 import { NotFound } from "./404/404";
 import { BlogDetails } from "./blogDetails/blogDetails";
 import { Services } from "./servicesPage/services";
@@ -63,6 +64,7 @@ function App() {
         <Route path="/Projects" element={<Project />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies-policy" element={<Cookies />} />
+        <Route path="/Prices" element={<Prices />} />
         <Route path="/privacy-policy" element={<Privacy />} />
 
         {/* ✅ Admin Panel Routes */}
