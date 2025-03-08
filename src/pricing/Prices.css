@@ -1,81 +1,110 @@
-/* Background Styling */
+/* price.css */
+
 .pricing-container {
-    min-height: 100vh;
-    background: linear-gradient(to right, #ffafbd, #ffc3a0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem 1rem;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* Title Styling */
-  .pricing-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Card Styling */
-  .pricing-card {
-    background: #ffffff;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .pricing-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Input Fields */
-  .pricing-label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #444;
-    display: block;
-    margin: 1rem 0;
-  }
-  
-  .pricing-select,
-  .pricing-input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: 0.3s;
-  }
-  
-  .pricing-select:focus,
-  .pricing-input:focus {
-    border-color: #ff758c;
-    box-shadow: 0px 0px 8px rgba(255, 117, 140, 0.5);
-  }
-  
-  /* Price Display */
-  .pricing-result {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    color: #222;
-  }
-  
-  .pricing-amount {
-    font-size: 2.5rem;
-    color: #ff758c;
-    font-weight: 700;
-    display: block;
-    margin-top: 0.5rem;
-    text-shadow: 1px 1px 5px rgba(255, 117, 140, 0.3);
-  }
-  
+  text-align: center;
+  padding: 40px;
+  background: url("../images/backgroung/pricesBg.jpg") no-repeat center center/cover;
+  min-height: 100vh;
+}
+
+.toggle-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  background: #ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: #007bff;
+  color: white;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.pricing-card.recommended {
+  border: 2px solid #007bff;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.cta-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #0056b3;
+}
+
+.best-deal {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff9800;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.extra-sections {
+  margin-top: 40px;
+}
+
+.testimonials, .faqs, .trust-badges {
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trust-badges p {
+  font-size: 14px;
+  color: #28a745;
+  font-weight: bold;
+}
