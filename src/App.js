@@ -26,10 +26,19 @@ import { Cookies } from "./Allterms/cookies";
 import { Privacy } from "./Allterms/privacy";
 import { SmoothScroll } from "./smooth";
 import AdminRoutes from "./admin/AdminRoutes";
-import { fetchMessage } from "./api/api"; // ✅ Import API function
+import { fetchMessage } from "./api/api";
+import ConsentScreen from "./components/ConsentScreen"; // ✅ Import Consent Screen
 
 function App() {
   const [message, setMessage] = useState("");
+  const [isConsentAccepted, setIsConsentAccepted] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem("userConsent");
+    if (consent === "true") {
+      setIsConsentAccepted(true);
+    }
+  }, []);
 
   useEffect(() => {
     const getMessage = async () => {
@@ -39,38 +48,46 @@ function App() {
     getMessage();
   }, []);
 
+  const handleAccept = () => {
+    localStorage.setItem("userConsent", "true");
+    setIsConsentAccepted(true);
+  };
+
   return (
     <BrowserRouter>
-      <SmoothScroll />
-      <Header />
-      <Routes>
-        {/* ✅ Public Routes */}
-        <Route path="/" element={<Home message={message} />} /> {/* ✅ Message Prop Pass */}
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/restricted-page" element={<RestrictedPage />} />
-        <Route path="/pricing" element={<PricingPlan />} />
-        <Route path="/faq" element={<Faq />} />
-        <Route path="/project-details" element={<ProjectDetails />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/team-single" element={<TeamSingle />} />
-        <Route path="/aboutus" element={<About />} />
-        <Route path="/error" element={<NotFound />} />
-        <Route path="/blog-details" element={<BlogDetails />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/service-single" element={<ServiceSingle />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/Projects" element={<Project />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/cookies-policy" element={<Cookies />} />
-        <Route path="/Prices" element={<Prices />} />
-        <Route path="/privacy-policy" element={<Privacy />} />
-
-        {/* ✅ Admin Panel Routes */}
-        <Route path="/admin/*" element={<AdminRoutes />} />
-      </Routes>
-      <Footer />
+      {!isConsentAccepted ? (
+        <ConsentScreen onAccept={handleAccept} /> // ✅ Show Consent Page First
+      ) : (
+        <>
+          <SmoothScroll />
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home message={message} />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/restricted-page" element={<RestrictedPage />} />
+            <Route path="/pricing" element={<PricingPlan />} />
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/project-details" element={<ProjectDetails />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/team-single" element={<TeamSingle />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="/error" element={<NotFound />} />
+            <Route path="/blog-details" element={<BlogDetails />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/service-single" element={<ServiceSingle />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/Projects" element={<Project />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies-policy" element={<Cookies />} />
+            <Route path="/Prices" element={<Prices />} />
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+          </Routes>
+          <Footer />
+        </>
+      )}
     </BrowserRouter>
   );
 }

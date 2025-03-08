@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 
 const Price = () => {
   const [isYearly, setIsYearly] = useState(false);
-  
+  const happyCustomers = 500; // Static value, can be fetched from backend
+
   const plans = [
     {
       name: "Basic",
@@ -62,10 +63,13 @@ const Price = () => {
           </motion.div>
         ))}
       </div>
+      
+      {/* Extra Sections */}
       <div className="extra-sections">
         <div className="testimonials">
           <h3>What Our Customers Say</h3>
           <p>"Amazing interior design service! Highly recommend." - Happy Customer</p>
+          <p className="happy-customers">✨ {happyCustomers}+ Happy Customers</p>
         </div>
         <div className="faqs">
           <h3>FAQs</h3>
