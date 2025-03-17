@@ -20,3 +20,4 @@ const ConsentScreen = ({ onAccept }) => {
 };
 
 export default ConsentScreen;
+  
