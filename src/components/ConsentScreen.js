@@ -1,33 +1,26 @@
 import React, { useState, useEffect } from "react";
-import "./ConsentScreen.css";
+import "./ConsentScreen.css"; // ✅ Ensure CSS file is linked properly
 
 const ConsentScreen = ({ onAccept }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consentGiven = localStorage.getItem("cookieConsent");
-    console.log("Consent Found in Storage:", consentGiven);
-
-    if (!consentGiven) {
+    const consent = localStorage.getItem("userConsent");
+    console.log("Consent Found in Storage:", consent);
+    
+    if (!consent) {
       console.log("Setting isVisible to TRUE");
       setIsVisible(true);
     }
   }, []);
 
   const handleAccept = () => {
-    console.log("Consent Accepted");
-    localStorage.setItem("cookieConsent", "true");
+    localStorage.setItem("userConsent", "accepted");
     setIsVisible(false);
-    if (onAccept) onAccept();
+    onAccept && onAccept(); // ✅ Callback to parent component
   };
 
-  console.log("isVisible State:", isVisible); // Debugging ke liye
-  console.log("Consent Found in Storage:");
-console.log("Setting isVisible to TRUE");
-
-
-
-  if (!isVisible) return null;
+  if (!isVisible) return null; // ✅ Hide if not visible
 
   return (
     <div className="consent-container">
