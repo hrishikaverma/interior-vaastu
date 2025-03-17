@@ -26,6 +26,8 @@ import { Cookies } from "./Allterms/cookies";
 import { Privacy } from "./Allterms/privacy";
 import { SmoothScroll } from "./smooth";
 import { fetchMessage } from "./api/api";
+import Help from "./help";
+
 
 // ✅ Consent Screen Component
 const ConsentScreen = () => {
@@ -109,6 +111,8 @@ function App() {
         <Route path="/cookies-policy" element={<Cookies />} />
         <Route path="/Prices" element={<Prices />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/help" element={<Help />} />
+{/* Added Help Page Route */}
       </Routes>
       <Footer />
     </BrowserRouter>

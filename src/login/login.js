@@ -49,7 +49,7 @@ const Login = () => {
 
         // Redirect to Home Page
         setTimeout(() => {
-          navigate("/");
+          navigate("/help");
         }, 1500);
       } catch (error) {
         setErrors({ general: "Invalid email or password. Please try again!" });
@@ -71,7 +71,8 @@ const Login = () => {
       }}
     >
       <div className="login-container">
-        <h2>Login</h2>
+        <h2>Login & Get Support
+        </h2>
         {successMessage && <p className="success">{successMessage}</p>}
         {errors.general && <p className="error">{errors.general}</p>}
         <form onSubmit={handleSubmit} className="login-form">
@@ -101,7 +102,7 @@ const Login = () => {
             {errors.password && <span className="error">{errors.password}</span>}
           </div>
 
-          <button type="submit" className="login-btn">Login</button>
+          <button type="submit" className="login-btn">Login </button>
         </form>
       </div>
     </div>
