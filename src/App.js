@@ -25,7 +25,6 @@ import { Terms } from "./Allterms/terms";
 import { Cookies } from "./Allterms/cookies";
 import { Privacy } from "./Allterms/privacy";
 import { SmoothScroll } from "./smooth";
-import AdminRoutes from "./admin/AdminRoutes";
 import { fetchMessage } from "./api/api";
 import ConsentScreen from "./components/ConsentScreen"; // ✅ Import Consent Screen
 
@@ -83,7 +82,6 @@ function App() {
             <Route path="/cookies-policy" element={<Cookies />} />
             <Route path="/Prices" element={<Prices />} />
             <Route path="/privacy-policy" element={<Privacy />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
           </Routes>
           <Footer />
         </>
