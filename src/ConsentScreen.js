@@ -1,47 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./ConsentScreen.css"; // External CSS file import
 
 const ConsentScreen = () => {
   const navigate = useNavigate();
+  const [showConsent, setShowConsent] = useState(true);
 
   useEffect(() => {
-    const consentGiven = localStorage.getItem("userConsent");
-    if (consentGiven === "accepted") {
-      navigate("/home"); // If already accepted, redirect to home
-    }
-  }, [navigate]);
+    localStorage.removeItem("userConsent"); // Deletes on every refresh
+    setShowConsent(true);
+  }, []);
 
   const handleAccept = () => {
     localStorage.setItem("userConsent", "accepted");
-    navigate("/home"); // Navigate to Home Page
+    setShowConsent(false);
+    navigate("/home"); // Navigate to Home
   };
 
   const handleDecline = () => {
-    alert("You must accept to continue.");
+    alert("To continue using the site, you must accept cookies.");
   };
 
-  return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <h2 className="text-2xl font-semibold mb-4">Consent Required</h2>
-        <p className="mb-4">We use cookies and store minimal data for a better experience.</p>
-        <div className="flex justify-center gap-4">
-          <button 
-            onClick={handleAccept} 
-            className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
-          >
+  return showConsent ? (
+    <div className="consent-container">
+      <div className="consent-card">
+        <h2>Consent Required</h2>
+        <p>We use cookies and store minimal data for a better experience.</p>
+        <div className="button-container">
+          <button onClick={handleAccept} className="accept-btn">
             Accept
           </button>
-          <button 
-            onClick={handleDecline} 
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-          >
+          <button onClick={handleDecline} className="decline-btn">
             Decline
           </button>
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default ConsentScreen;
