@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ConsentScreen.css";
 
 const ConsentScreen = ({ onAccept }) => {
-  const [isVisible, setIsVisible] = useState(false); // Default false
-
-  useEffect(() => {
-    const consent = localStorage.getItem("userConsent");
-    console.log("Consent Found in Storage:", consent);
-
-    if (consent !== "true") {
-      setIsVisible(true); // Only show if not accepted
-      console.log("Setting isVisible to TRUE");
-    }
-  }, []);
+  const [isVisible, setIsVisible] = useState(true); // Always show popup
 
   const handleAccept = () => {
-    localStorage.setItem("userConsent", "true");
-    setIsVisible(false);
-    console.log("Consent Accepted & Stored:", localStorage.getItem("userConsent"));
+    console.log("Consent Accepted");
+    setIsVisible(false); // Hide popup after accepting
   };
 
   return (
