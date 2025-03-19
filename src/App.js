@@ -27,6 +27,9 @@ import { Privacy } from "./Allterms/privacy";
 import { SmoothScroll } from "./smooth";
 import { fetchMessage } from "./api/api";
 import Help from "./help";
+import Faqs from "./Faqs";
+
+
 
 
 // ✅ Consent Screen Component
@@ -112,6 +115,8 @@ function App() {
         <Route path="/Prices" element={<Prices />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/Faqs" element={<Faqs />} />
+        
 {/* Added Help Page Route */}
       </Routes>
       <Footer />
