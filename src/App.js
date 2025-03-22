@@ -28,6 +28,7 @@ import { SmoothScroll } from "./smooth";
 import { fetchMessage } from "./api/api";
 import Help from "./help";
 import Faqs from "./Faqs";
+import GetStarted from "./GetStarted";
 
 
 
@@ -116,6 +117,8 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/help" element={<Help />} />
         <Route path="/Faqs" element={<Faqs />} />
+        <Route path="/Getstarted" element={<GetStarted />} />
+
         
 {/* Added Help Page Route */}
       </Routes>

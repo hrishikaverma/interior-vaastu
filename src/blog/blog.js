@@ -46,7 +46,7 @@ Contrary to popular belief, stunning interior design doesn’t require a hefty b
               </p>
             </div>
             <div className="ln-detail">
-              <p className="ac-date">3 March 2023</p>
+              <p className="ac-date">20 March 2025</p>
               <Link to="/blog-details">
                 <button><IoIosArrowForward /></button>
               </Link>

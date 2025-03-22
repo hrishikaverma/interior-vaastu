@@ -51,12 +51,12 @@ export function Home() {
   return (
     <div className="home">
       <div className="homeNews" style={{ backgroundImage: `url(${photoBg})` }}>
-        <h1>Let Your Home Be Unique</h1>
+        <h1>Transform Your Space with the Power of Vaastu</h1>
         <p>
           Discover the essence of elegant and harmonious living with <strong>Interior Vaastu</strong>.
           We blend creativity with Vaastu principles to craft spaces that reflect beauty, balance, and comfort.
         </p>
-        <Link to="">
+        <Link to="/GetStarted">
           <button className="get-btn">
             Get Started
             <BsArrowRight style={{ marginLeft: "2%", color: "#CDA274" }} />

@@ -1,0 +1,171 @@
+.vaastu-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f9f6ee; /* Light cream background */
+    color: #333; /* Darker shade for readability */
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100vw;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Text glow effect */
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffd700; /* Golden color for a premium look */
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    max-width: 650px;
+    color: #f5deb3; /* Wheat color for contrast */
+    margin-top: 10px;
+}
+
+/* Card Style Sections */
+.vaastu-history, .vaastu-directions {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.vaastu-history:hover, .vaastu-directions:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Sections */
+.toggle-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.toggle-btn {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #a0522d;
+}
+
+/* Section Headings */
+.vaastu-history h2, .vaastu-directions h2 {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #8b4513; /* Rich brown */
+    text-transform: uppercase;
+}
+
+/* Direction List */
+.vaastu-directions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vaastu-directions li {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+.vaastu-directions li strong {
+    color: #8b4513;
+    margin-left: 8px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+        padding-top: 100px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+
+    .vaastu-history h2, .vaastu-directions h2 {
+        font-size: 1.6rem;
+    }
+
+    .vaastu-directions li {
+        font-size: 1rem;
+    }
+}
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+    width: 200px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar Styles */
+.sidebar-container {
+    width: 280px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100vh;
+    transition: right 0.5s ease-in-out;
+}
+
+.sidebar-container.open {
+    right: 0;
+}
